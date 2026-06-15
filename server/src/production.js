@@ -8,6 +8,7 @@ import { authRouter, authMiddleware } from './auth.js';
 import * as db from './db.js';
 import { engine, SUPPORTED } from './stocks.js';
 import { initSocket } from './socket.js';
+import 'dotenv/config'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.join(__dirname, '..');
