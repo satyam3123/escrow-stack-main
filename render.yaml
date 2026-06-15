@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: escrow-stack
+    env: node
+    plan: free
+    buildCommand: npm run install:all && npm --prefix web run build
+    startCommand: node render-start.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: CORS_ORIGIN
+        value: https://escrow-stack.onrender.com
+      - key: JWT_SECRET
+        value: your-secret-key-change-this
+      - key: DB_PATH
+        value: /tmp/escrow.db
