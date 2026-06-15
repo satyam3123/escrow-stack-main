@@ -11,7 +11,7 @@ import { initSocket } from './socket.js';
 import 'dotenv/config'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const projectRoot = path.join(__dirname, '..');
+const projectRoot = path.join(__dirname, '../..');
 
 const app = express();
 app.use(cors({ origin: config.corsOrigin }));
